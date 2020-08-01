@@ -133,8 +133,16 @@
 
     Las opciones son contratos que dan derecho a una de sus partes a comprar
     (o vender) el subyacente, a un precio determinando en un tiempo futuro.
-    Las opciones que dan derecho a compra se denominan calls y las que dan
-    derecho a venta se denominan puts.
+    
+    \begin{itemize}
+      \item call: Opci\'on para comprar.
+      \item put: Opci\'on para vender.
+      \item K: Strike.
+      \item T: Madurez del contrato.
+      \item S(T): Valor del subyacente en el tiempo T.
+    \end{itemize}
+
+    %Las opciones que dan derecho a compra se denominan calls y las que dan derecho a venta se denominan puts.
 
     \end{block}
 
@@ -263,10 +271,15 @@
 
     \begin{block}{F\'ormula de Black Scholes.}
 
-    Sea c la prima de una opci\'on call europea, con strike K, r la tasa libre de riesgo, madurez T y con precio del subyacente $S(0)$,
-    sobre un activo cuyo precio sigue un movimiento geom\'etrico browniano con tendencia $r$ y
-    volatilidad $\sigma$ bajo las probabilidades de riesgo neutral.
-    Entonces, bajo una hip\'otesis de no arbitraje se cumple que:
+    \begin{itemize}
+      \item c: Prima de una opci\'on call.
+      \item K: Strike.
+      \item r: Tasa libre de riesgo.
+      \item T: Madurez.
+      \item S(0): Precio del subyacente al inicio del contrato.
+    \end{itemize}
+
+    %Precio sigue un movimiento geom\'etrico browniano con tendencia $r$ y  volatilidad $\sigma$ bajo las probabilidades de riesgo neutral. Entonces, bajo una hip\'otesis de no arbitraje se cumple que:
 
 
     \begin{equation}
