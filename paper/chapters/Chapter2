@@ -327,7 +327,7 @@ tal como se dan los cambios en el valor de $S$. Black-Scholes asume $\sigma$
 constante, esto implica una previa estimación estadística de $\sigma$, por ejemplo
 medir el comportamiento de los precios en los últimos meses y usar estimadores de varianza (volatilidad Histórica).
 
-Como vimos en la sección~\ref{sec:FormulaB} la fórmula de Black-Scholes para una opción call depende de distintos parámetros, el precio inicial del activo, la tasa libre de riesgo, el stike, la madurez de la opción y su volatilidad. Pero esta última no te la brinda el mercado.
+Como vimos en la sección~\ref{sec:FormulaB} la fórmula de Black-Scholes para una opción call depende de distintos parámetros, el precio inicial del activo, la tasa libre de riesgo, el stike, la madurez de la opción y su volatilidad. Pero esta última no la brinda el mercado.
 
 \subsubsection{Volatilidad Histórica}
 
@@ -436,7 +436,7 @@ f'(x) = \lim_{h \to 0} \displaystyle\frac{f(x+h)-f(x)}{h} \approx \displaystyle\
 Luego el método de la secante esta dado por:
 
 \begin{equation}
-x_{n+1} = x_n - f(x_{n})\displaystyle\frac{x_{n}x_{n-1}}{f(x_{n})f(x_{n-1})}
+x_{n+1} = x_n - f(x_{n})\displaystyle\frac{x_{n}-x_{n-1}}{f(x_{n})-f(x_{n-1})}
 \end{equation}
 
 
@@ -467,7 +467,7 @@ donde $f_k=f(x_k)$. El algoritmo~\ref{Abrent} detalla el método de Brent.
 \SetKwInOut{Input}{Input}
 \SetKwInOut{Output}{Output}
 \ResetInOut{output}
-\Input{f, a, b, tol}
+\Input{f, a, b, tol, $\epsilon$}
 \Output{c}
 \SetKwInput{Precondition}{Precondition}
 \Precondition {f(a)f(b) $<$ 0 \textbf{and} a $<$ b}
@@ -476,10 +476,10 @@ donde $f_k=f(x_k)$. El algoritmo~\ref{Abrent} detalla el método de Brent.
   c := (a+b)/2\;
   err := err/2\;    
   fc := f(c)\;
-  \If{fc = 0}{
+  \If{$|$fc$| < \epsilon$}{
   return\;
   }
-  \eIf{fcf(a) $<$ 0}{
+  \eIf{f(a)fc $<$ 0}{
    b := c\;
    }{
    a := c\;
@@ -496,7 +496,7 @@ donde $f_k=f(x_k)$. El algoritmo~\ref{Abrent} detalla el método de Brent.
 \SetKwInOut{Input}{Input}
 \SetKwInOut{Output}{Output}
 \ResetInOut{output}
-\Input{f, a, b, tol}
+\Input{f, a, b, tol, $\epsilon$}
 \Output{b}
 \SetKwInput{Precondition}{Precondition}
 \Precondition {f(a)f(b) $<$ 0}
@@ -505,8 +505,8 @@ donde $f_k=f(x_k)$. El algoritmo~\ref{Abrent} detalla el método de Brent.
  }
  c := a\;
  mflag := True\;
- \While{tol $< |b - a|$ \textbf{or} f(b) = 0}{
-  \eIf{f(a) $\not=$ f(c) and f(b) $\not=$ f(c)}{
+ \While{tol $< |b - a|$ \textbf{or} $|$f(b)$|$ $< \epsilon$}{
+  \eIf{$|f(a)-f(c)| > \epsilon$ and $|f(b)-f(c)| > \epsilon$}{
   	A := $\displaystyle\frac{af(b)f(c)}{(f(a)-f(b))(f(a)-f(c))}$\;
   	B := $\displaystyle\frac{bf(a)f(c)}{(f(b)-f(a))(f(b)-f(c))} $\;
   	C := $\displaystyle\frac{cf(a)f(b)}{(f(c)-f(a))(f(c)-f(b))}$\;
@@ -677,7 +677,7 @@ ReLu(z) = \max(z,0)
 \label{Tanh} 
 \\
 Elu(z)= \begin{cases}
-          \alpha(e^{z -1}) & \mbox{si } z < 0\\
+          \alpha(e^{z}-1) & \mbox{si } z < 0\\
           z  &   \mbox{si }z \ge 0
         \end{cases}
 \label{Elu}

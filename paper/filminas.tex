@@ -30,7 +30,7 @@
   Universidad Nacional de C\'ordoba\\
   FaMAF
 }
-\date{Agregar Date}
+\date{18 de agosto de 2020}
 
 \begin{document}
 
@@ -690,7 +690,7 @@
     \begin{block}{C\'alculo de prima de opci\'on call con ratio}
         
         Rene Garcia y Ramazan Gen\c{c}ay, invocando la homogeneidad de la f\'ormula de Black-Scholes,
-        demostraron que las redes neuronales estiman mejor el precio de una opci\'on usando el cociente $S/K$.
+        demostraron que las redes neuronales estiman mejor el precio de una opci\'on usando el cociente $S/K$ (ratio).
 
         \begin{eqnarray}
             \frac{c}{K} &=& \frac{B(S(0),K,r,\sigma,T)}{K}\\
@@ -992,13 +992,13 @@ Step Decay contra Cyclical Decay.
 
   \begin{block}{Impacto de la volatilidad impl\'icita con respecto al precio de la call}    
     \begin{itemize}
-      \item Menos impacto en las opciones OTM.
+      \item Menos impacto en las opciones con ratio $< 1$.
       \item Menos impacto en las opciones cortas.
     \end{itemize}
   \end{block}
 
   \begin{block}{Error}
-    En la pr\'actica se observa mas error en estimaci\'on sobre las opciones ITM con $\Phi(d_1)$ y
+    En la pr\'actica se observa mas error en estimaci\'on sobre las opciones con ratio $> 1$, $\Phi(d_1)$ y
     $\Phi(d_2)$ cercanos a 1.
   \end{block}
 
@@ -1063,7 +1063,7 @@ Step Decay contra Cyclical Decay.
             \begin{tabular}{|l|l|l|l|l|}
                 \hline
                  & Red Neuronal & Brent  &  Bisecci\'on  \\ \hline
-                Tiempo (segundos)  & $7.34$  & $157.05$ & $318.31$   \\ \hline
+                Tiempo (s)  & $7.34$  & $157.05$ & $318.31$   \\ \hline
                 Robustez & Si  &  No & No \\ \hline
                   
             \end{tabular}

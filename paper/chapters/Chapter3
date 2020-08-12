@@ -26,7 +26,7 @@ el valor la opción. A continuación listaremos una serie de modelos desarrollad
 
 Todos los modelos anteriormente mencionados para ser aplicados necesitan la volatilidad 
 entre otros parámetros. Pero si el mercado no nos brinda el valor de la volatilidad hay que estimarla, 
-una manera es mediante la volatilidad implícita, pero como la volatilidad depende del stike y la madurez, pueden haber casos en que no puedo obtener la volatilidad para algún contrato, entonces en esos casos se estima la volatilidad con superficie de volatilidad visto en el capítulo anterior.
+una manera es mediante la volatilidad implícita, pero como la volatilidad depende del strike y la madurez, pueden haber casos en que no puedo obtener la volatilidad para algún contrato, entonces en esos casos se estima la volatilidad con superficie de volatilidad visto en el capítulo anterior.
 
 \section{Estrategias dependiendo de la volatilidad implícita}
 
