@@ -5,11 +5,11 @@
 En este trabajo se presentó la importancia del cálculo de la volatilidad implícita. Además se propuso una manera diferente del cálculo que usualmente se utiliza, usando redes neuronales feedforward.
 
 Si bien el método de bisección estima mejor la volatilidad implícita, no es una mejora significativa con respecto 
-a la red neuronal o al método de Brent, sin embargo en tiempo de ejecución la red neuronal es $21$ veces menor
+a la red neuronal o al método de Brent. Sin embargo en tiempo de ejecución la red neuronal es $21$ veces menor
 que el método de Brent y $43$ veces menor que el método de bisección.
 
 En caso de tener datos atípicos, por ejemplo precio de strike tres veces mas grande que el precio del subyacente,
-o tasas libre de riesgo superiores al 20\%, o contratos muy largos, en esos casos es conveniente usar los métodos numéricos, ya que la red no va a estimar bien, porque la red no entrenó con esos datos. Sin embargo hay casos en los que los métodos numéricos no pueden ser aplicados.
+o tasas libre de riesgo superiores al 20\%, o contratos muy largos, en esos casos es conveniente usar los métodos numéricos, ya que la red no va a estimar bien, porque la red no entrenó con esos datos. Sin embargo hay casos en los que no existe $a > 0$ que cumpla $g(a) < 0$, entonces los métodos numéricos no pueden ser aplicados.
 
 En caso que la precisión sea imprescindible, entonces se utilizará el método de bisección.
 

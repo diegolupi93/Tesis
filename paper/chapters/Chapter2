@@ -399,7 +399,7 @@ Las volatilidades que no se encuentren en la tabla son calculadas mediante inter
 
 \section{Método de Bisección}
 
-El método de bisección se basa en el Teorema de los valores intermedios~\cite{Intermedio}. Si $f$ es continua en un intervalo cerrado $[a,b]$ y $f(a)f(b)< 0$, entonces $f$ tiene al menos una raíz en el intervalo abierto $(a,b)$.
+El método de bisección se basa en el Teorema de los valores intermedios~\cite{Intermedio}. Si $f$ es continua en un intervalo cerrado $[a,b]$ con $f(a)$ y $f(b)$ de distinto signo, obteniendo $f(a)f(b)< 0$, entonces $f$ tiene al menos una raíz en el intervalo abierto $(a,b)$.
 
 Si el algoritmo de bisección se aplica a una función continua $f$ en un intervalo $[a, b]$, donde
 $f(a)f(b) < 0$, entonces, después de $n$ pasos se habrá calculado una raíz aproximada con un error

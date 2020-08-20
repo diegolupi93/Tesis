@@ -7,7 +7,12 @@ Para el desarrollo del presente trabajo es necesario estudiar y comprender varia
 
 \section{Motivación}
 
-La volatilidad implícita en estos días ha adquirido una gran importancia. Se puede utilizar para el cálculo de superficies de volatilidad. Las superficies de volatilidad son utilizadas para valuar opciones mediante modelos matemáticos.
+Las opciones son contratos financieros que dan derecho a su tenedor a comprar o vender un activo financiero a un cierto precio (strike) en un determinado tiempo futuro. Esta condición hace que las opciones tengan un valor que depende de la madurez del contrato, el tipo de subyacente, el precio pactado, y otras consideraciones.
+En 1973 Fischer Black y Myron Scholes propusieron una fórmula para la valoración de opciones call europeas con ciertas hipótesis de mercado, fórmula que les valió el premio Nobel en Economía en el año 1997. Esta fórmula relaciona la prima de una opción con el strike, la madurez, la tasa de interés del mercado y con la llamada "volatilidad" del activo. Esta volatilidad es el único parámetro desconocido ya que no es observable en el mercado.
+Pero dado que la prima de la opción sí es observable en el mercado, entonces se utiliza la fórmula de Black Scholes para extraer un valor de este parámetro y se lo denomina "volatilidad implicita".
+
+La volatilidad implícita refleja las expectativas que tiene el mercado respecto a la variabilidad futura de un activo,
+en estos días ha adquirido una gran importancia. Se puede utilizar para el cálculo de superficies de volatilidad. Las superficies de volatilidad son utilizadas para valuar opciones mediante modelos matemáticos.
 
 Otra utilidad es como parámetro de riesgo para inversores, dependiendo de la volatilidad implícita se pondera algunas estrategias sobre otras para disminuir el riesgo y aumentar su posibilidad de rentabilidad.
 

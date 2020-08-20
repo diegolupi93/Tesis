@@ -46,7 +46,7 @@ En las siguientes definiciones consideremos una opción europea con strike $K$ s
 \begin{itemize}
   \item ATM (at-the-money): Una opción está ATM cuando $S(0)=K$ tanto en opciones put como call.
   \item OTM (out-of-the-money): Una opción call está OTM cuando $S(0) < K$ y una opción put cuando $S(0) > K$. Es decir que si se ejerce la opción en ese momento el payoff es cero.
-  \item ITM (at-the-money): Una opción call está ITM cuando $S(0) > K$ y en una opción put cuando $S(0) < K$. Es decir que si se ejerce la opción en ese momento el payoff es $|S(0) - K|$.
+  \item ITM (in-the-money): Una opción call está ITM cuando $S(0) > K$ y en una opción put cuando $S(0) < K$. Es decir que si se ejerce la opción en ese momento el payoff es $|S(0) - K|$.
 \end{itemize}
 
 %Donde $S(0)$ es el precio del subyacente al momento de entrar a la opción y K es el strike de la opción.
@@ -125,7 +125,7 @@ Las claves para aplicar estas estrategias son las siguientes:
 \begin{itemize}
 	\item El inversor tiene expectativa que el valor del subyacente tenga un gran cambio, sin importar si el precio sube o baja.
 	\item Se busca que la volatilidad implícita sea baja al momento de aplicar la estrategia.
-	\item Idealmente se busca opciones out-of-the-money. 
+	\item Idealmente se busca opciones out-of-the-money o at-the-money. 
 	\item Se busca que sean opciones largas.%para que el precio del subyacente varie lo suficiente
 \end{itemize}
 

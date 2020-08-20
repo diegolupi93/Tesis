@@ -25,7 +25,7 @@ donde $d_1$ es la ecuación~\ref{d1eq} y $d_2$ es la ecuación~\ref{d2eq}.
 Como hemos visto en la sección anterior, la fórmula (\ref{c2})
 nos da un valor para $\displaystyle\frac{c}{K}$.
 En nuestro caso buscamos estimar la volatilidad implícita, pero usaremos el cociente para generar la muestra ya
-que en la práctica la red estima mejor, observar que podemos generar la muestra del tamaño que deseemos, por lo general generaremos muestras de $10^6$ elementos para entrenamiento, ya que consideramos que es una muestra lo suficientemente grande para no tener problemas de sobreentrenamiento sin tener tanto costo en el tiempo de entrenamiento, en tanto las muestras de validación y test serán de $10^5$ elementos.
+que en la práctica la red estima mejor. Observar que podemos generar la muestra del tamaño que deseemos, por lo general generaremos muestras de $10^6$ elementos para entrenamiento, ya que consideramos que es una muestra lo suficientemente grande para no tener problemas de sobreentrenamiento sin tener tanto costo en el tiempo de entrenamiento. En tanto las muestras de validación y test serán de $10^5$ elementos.
 
 Luego vamos a generar dos muestras, una muestra amplia y una muestra estrecha. La muestra amplia va a ser para el entrenamiento de la red, y la muestra angosta para la evaluación de la red.
 
